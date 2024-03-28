@@ -1,0 +1,7 @@
+# cgatcore
+pipeline.log
+ctmp*
+# custom output files
+logs/
+# JADE
+sps-*

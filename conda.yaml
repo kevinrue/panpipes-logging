@@ -1,0 +1,7 @@
+name: cgatcore
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  - cgatcore
