@@ -1,7 +1,7 @@
 # cgatcore
 pipeline.log
 ctmp*
-# custom output files
+# pipeline
 logs/
 # JADE
 sps-*
