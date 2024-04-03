@@ -3,5 +3,8 @@ pipeline.log
 ctmp*
 # pipeline
 logs/
+results/
+# standalone
+standalone/*.log
 # JADE
 sps-*
