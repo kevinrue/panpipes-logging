@@ -23,7 +23,7 @@ print(job_kwargs)
 @follows(mkdir("logs"))
 @follows(mkdir("results"))
 @originate("results/test.txt")
-def test(target_file):
+def run_script(target_file):
     """this is to aggregate all the cellranger multi metric_summary files
     it also does some plotting
     """
@@ -38,7 +38,7 @@ def test(target_file):
     P.run(cmd, **job_kwargs)
 
 
-@follows(test)
+@follows(run_script)
 #@originate("ruffus.check")
 def full():
     """
