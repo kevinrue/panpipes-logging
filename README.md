@@ -37,7 +37,7 @@ python pipeline_logging.py make --local
 ## Cleanup
 
 ```bash
-rm -rf sps-10* ctmp* logs/* results/*
+rm -rf sps-10* ctmp* logs/* results/* pipeline.log
 ```
 
 ## Standalone scripts
