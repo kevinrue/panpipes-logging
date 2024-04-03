@@ -22,14 +22,14 @@ logger_pipeline = logging.getLogger("pipeline")
 logger_pipeline.setLevel(logging.INFO)
 logger_pipeline.addHandler(handler_pipeline_log)
 
-logger_stdout.debug("Log test using logger_stdout.debug")
-logger_stdout.info("Log test using logger_stdout.info")
-print("Log test using print")
+logger_stdout.debug("Log test using logger_stdout.debug") # this will not be logged due to its DEBUG level
+logger_stdout.info("Log test using logger_stdout.info") #  this will be logged to the task log file (because stdout is redirected to the task log file)
+print("Log test using print") # this will be logged to the task log file (because stdout is redirected to the task log file) - bad practice to print though!
 
-logger_pipeline.debug("Log test using logger_pipeline.debug")
-logger_pipeline.info("Log test using logger_pipeline.info")
-logger_pipeline.info("script.py logging to file 'logs/test.out'") #  This is the logging message we care about
+logger_pipeline.debug("Log test using logger_pipeline.debug") # this will not be logged due to its DEBUG level
+logger_pipeline.info("Log test using logger_pipeline.info") # this will be logged to the pipeline.log file
+logger_pipeline.info("script.py logging to file 'logs/test.out'") # this will be logged to the pipeline.log file - this is the logging message we care about!
 
-# TODO: pass 'results/test.txt' from pipeline_logging.py to script.py
+# TODO: pass 'results/test.txt' from pipeline_logging.py to script.py instead of hard coding it
 with(open("results/test.txt", "w")) as f:
     print(f.write("Hello, world!"))
