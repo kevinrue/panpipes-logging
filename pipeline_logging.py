@@ -32,6 +32,7 @@ def run_script(target_file):
 
     cmd = """
         python %(py_path)s/script.py
+            --output_file %(target_file)s
             2> %(errfile)s > %(outfile)s
             """
     job_kwargs["job_threads"] = 1
